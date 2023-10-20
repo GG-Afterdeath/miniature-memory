@@ -37,7 +37,7 @@ app.post('/bootcamps', (req, resp) => {
         msg: "Aquí se creará un bootcamp"
     })
 } )
-
+//juuj
 // Traer bootcamp por ID
 
 app.put('/bootcamps/:id', (req, resp) => {
