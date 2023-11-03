@@ -1,60 +1,26 @@
 const express = require('express')
 const dotenv = require('dotenv')
 const colors = require('colors')
+const conectarDB = require('./config/db')
+
+// Dependencias de rutas
+const bootcampRoutes = require('./routes/bootcampRoutes')
 
 // Vincular al archivo .env
 dotenv.config(
     { path: './config/.env'}
 )
 
+//CONECTAR A LA DB
+conectarDB()
+
 // Construir el objeto de la aplicación
+const app = express()
+app.use(express.json())
 
-app = express()
-
-// Rutas de bootcamps GET
-// Endpoint
-// Traer todos los bootcamps
-app.get('/bootcamps', (req, resp) => {
-    resp.json({
-        success: true,
-        msg: "Aquí se mostrarán todos los bootcamps"
-    })
-} )
-
-// Traer bootcamp por ID
-
-app.get('/bootcamps/:id', (req, resp) => {
-    resp.json({
-        success: true,
-        msg: `Aquí se mostrará un bootcamp cuyo ID sea ${req.params.id}`
-    })
-} )
-// POST
-// Crear un bootcamp
-app.post('/bootcamps', (req, resp) => {
-    resp.json({
-        success: true,
-        msg: "Aquí se creará un bootcamp"
-    })
-} )
-//juuj
-// Traer bootcamp por ID
-
-app.put('/bootcamps/:id', (req, resp) => {
-    resp.json({
-        success: true,
-        msg: `Aquí se editará un bootcamp cuyo ID sea ${req.params.id}`
-    })
-} )
-
-// Borrar bootcamp por ID
-
-app.delete('/bootcamps/:id', (req, resp) => {
-    resp.json({
-        success: true,
-        msg: `Aquí se borrará el bootcamp ${req.params.id}` 
-    })
-} )
+// Conectar las rutas al objeto app
+app.use('/api/v1/devcamp/bootcamp',
+        bootcampRoutes)
 
 // Traer todos los cursos
 app.get('/courses', (req, resp) => {
@@ -112,7 +78,7 @@ app.get('/reviews/:id', (req, resp) => {
     })
 })
 
-//Crear review
+//Crear reseña
 app.post('/reviews', (req, resp) => {
     resp.json({
         succes: true,
@@ -120,7 +86,7 @@ app.post('/reviews', (req, resp) => {
     })
 })
 
-// Editar review
+// Editar reseña
 app.put('/reviews/:id', (req, resp) => {
     resp.json({
         succes: true,
@@ -128,7 +94,7 @@ app.put('/reviews/:id', (req, resp) => {
     })
 })
 
-// Borrar review
+// Borrar reseña
 app.delete('/reviews/:id', (req, resp) => {
     resp.json({
         succes: true,
