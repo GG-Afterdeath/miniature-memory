@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "devcamp-2687386",
-    "dateExported": "2023-11-03T23:27:37.692Z",
+    "dateExported": "2023-11-10T22:23:33.398Z",
     "version": "1.1",
     "folders": [
         {
@@ -39,11 +39,11 @@
             "colId": "ea5cc3e9-edb2-456c-9c7d-0a9a157c9c23",
             "containerId": "e7b6a13a-128c-4acf-874f-fd824ecefad0",
             "name": "Bring (all) bootcamps",
-            "url": "http://127.0.0.1:5000/api/v1/devcamp/bootcamp/65456ffc06f23f1f1d75a2db",
+            "url": "http://127.0.0.1:5000/api/v1/devcamp/bootcamp/",
             "method": "GET",
             "sortNum": 10000,
             "created": "2023-11-03T19:12:55.114Z",
-            "modified": "2023-11-03T22:43:25.289Z",
+            "modified": "2023-11-10T19:35:14.865Z",
             "headers": [],
             "params": [],
             "tests": []
@@ -53,11 +53,25 @@
             "colId": "ea5cc3e9-edb2-456c-9c7d-0a9a157c9c23",
             "containerId": "e7b6a13a-128c-4acf-874f-fd824ecefad0",
             "name": "Bring (ID) bootcamp",
-            "url": "http://127.0.0.1:5000/api/v1/devcamp/bootcamp/654574ff06f23f1f1d75a2e0",
+            "url": "http://127.0.0.1:5000/api/v1/devcamp/bootcamp/654e8b04ff39c701e6d79739dw",
             "method": "GET",
             "sortNum": 20000,
             "created": "2023-11-03T19:12:55.115Z",
-            "modified": "2023-11-03T22:44:44.657Z",
+            "modified": "2023-11-10T20:07:37.084Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "476785a0-3e0c-45d7-b811-4613d472573d",
+            "colId": "ea5cc3e9-edb2-456c-9c7d-0a9a157c9c23",
+            "containerId": "e7b6a13a-128c-4acf-874f-fd824ecefad0",
+            "name": "Bring (ID) bootcamp errors",
+            "url": "http://127.0.0.1:5000/api/v1/devcamp/bootcamp/3",
+            "method": "GET",
+            "sortNum": 25000,
+            "created": "2023-11-10T20:05:02.526Z",
+            "modified": "2023-11-10T20:21:21.751Z",
             "headers": [],
             "params": [],
             "tests": []
@@ -66,12 +80,12 @@
             "_id": "1b943ec5-fe05-4a43-9e3f-81abf01396b9",
             "colId": "ea5cc3e9-edb2-456c-9c7d-0a9a157c9c23",
             "containerId": "e7b6a13a-128c-4acf-874f-fd824ecefad0",
-            "name": "Create ootcamp",
+            "name": "Create bootcamp",
             "url": "http://127.0.0.1:5000/api/v1/devcamp/bootcamp",
             "method": "POST",
             "sortNum": 30000,
             "created": "2023-11-03T19:12:55.116Z",
-            "modified": "2023-11-03T23:03:08.039Z",
+            "modified": "2023-11-10T20:43:32.808Z",
             "headers": [
                 {
                     "name": "Content-Type",
@@ -81,7 +95,7 @@
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\":\"Estilos y diseño\" ,\n  \"phone\": 1314714243 ,\n  \"address\":\"SENA fontibón\",\n  \"topics\":[\n        \"Frontend\"\n    ],\n  \"createdAT\":\"2023-11-03\"\n}",
+                "raw": "{\n  \"name\":\"Bootcamp Java\" ,\n  \"phone\": 43174564 ,\n  \"address\":\"SENA Calle 52\",\n  \"topics\":[\n        \"AI\"\n    ],\n  \"createdAT\":\"2023-11-03\"\n}",
                 "form": []
             },
             "tests": []
@@ -91,11 +105,11 @@
             "colId": "ea5cc3e9-edb2-456c-9c7d-0a9a157c9c23",
             "containerId": "e7b6a13a-128c-4acf-874f-fd824ecefad0",
             "name": "Edit (ID) bootcamp",
-            "url": "http://127.0.0.1:5000/api/v1/devcamp/bootcamp/654574ff06f23f1f1d75a2e0",
+            "url": "http://127.0.0.1:5000/api/v1/devcamp/bootcamp/654e9320b8de981da4a030560",
             "method": "PUT",
             "sortNum": 40000,
             "created": "2023-11-03T19:12:55.117Z",
-            "modified": "2023-11-03T23:26:52.990Z",
+            "modified": "2023-11-10T21:06:53.290Z",
             "headers": [
                 {
                     "name": "Content-Type",
@@ -105,7 +119,31 @@
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"address\":\"SENA malambo\"\n}",
+                "raw": "{\n  \"address\":\"SENA Carrera 30\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "0765de2e-54f8-4bfc-83f2-52b40dc279a6",
+            "colId": "ea5cc3e9-edb2-456c-9c7d-0a9a157c9c23",
+            "containerId": "e7b6a13a-128c-4acf-874f-fd824ecefad0",
+            "name": "Edit (ID) bootcamp - con errores",
+            "url": "http://127.0.0.1:5000/api/v1/devcamp/bootcamp/654e9404b8de981da4a030610",
+            "method": "PUT",
+            "sortNum": 45000,
+            "created": "2023-11-10T21:07:12.857Z",
+            "modified": "2023-11-10T21:08:16.890Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"address\":\"SENA Carrera 30\"\n}",
                 "form": []
             },
             "tests": []
@@ -115,11 +153,11 @@
             "colId": "ea5cc3e9-edb2-456c-9c7d-0a9a157c9c23",
             "containerId": "e7b6a13a-128c-4acf-874f-fd824ecefad0",
             "name": "Delete (ID9 bootcamp",
-            "url": "http://127.0.0.1:5000/bootcamps/8",
+            "url": "http://127.0.0.1:5000/api/v1/devcamp/bootcamp/654e95f4779cca8967a8ebd6",
             "method": "DELETE",
             "sortNum": 50000,
             "created": "2023-11-03T19:12:55.118Z",
-            "modified": "2023-11-03T19:12:55.118Z",
+            "modified": "2023-11-10T21:21:17.412Z",
             "headers": [],
             "params": [],
             "tests": []
@@ -129,11 +167,11 @@
             "colId": "ea5cc3e9-edb2-456c-9c7d-0a9a157c9c23",
             "containerId": "c33f8298-cba2-43a5-a8e5-2d11fedd1b4c",
             "name": "Bring (ALL) courses of the bootcamp",
-            "url": "http://127.0.0.1:5000/courses",
+            "url": "http://127.0.0.1:5000/api/v1/devcamp/course/",
             "method": "GET",
             "sortNum": 60000,
             "created": "2023-11-03T19:12:55.119Z",
-            "modified": "2023-11-03T19:12:55.119Z",
+            "modified": "2023-11-10T22:01:51.274Z",
             "headers": [],
             "params": [],
             "tests": []
@@ -143,11 +181,11 @@
             "colId": "ea5cc3e9-edb2-456c-9c7d-0a9a157c9c23",
             "containerId": "c33f8298-cba2-43a5-a8e5-2d11fedd1b4c",
             "name": "Bring (ID) course",
-            "url": "http://127.0.0.1:5000/courses/7",
+            "url": "http://127.0.0.1:5000/api/v1/devcamp/course/",
             "method": "GET",
             "sortNum": 70000,
             "created": "2023-11-03T19:12:55.120Z",
-            "modified": "2023-11-03T19:12:55.120Z",
+            "modified": "2023-11-10T22:02:03.311Z",
             "headers": [],
             "params": [],
             "tests": []
@@ -157,11 +195,11 @@
             "colId": "ea5cc3e9-edb2-456c-9c7d-0a9a157c9c23",
             "containerId": "c33f8298-cba2-43a5-a8e5-2d11fedd1b4c",
             "name": "Create course",
-            "url": "http://127.0.0.1:5000/courses",
+            "url": "http://127.0.0.1:5000/api/v1/devcamp/course/",
             "method": "POST",
             "sortNum": 80000,
             "created": "2023-11-03T19:12:55.121Z",
-            "modified": "2023-11-03T19:12:55.121Z",
+            "modified": "2023-11-10T22:02:08.470Z",
             "headers": [],
             "params": [],
             "tests": []
@@ -171,11 +209,11 @@
             "colId": "ea5cc3e9-edb2-456c-9c7d-0a9a157c9c23",
             "containerId": "c33f8298-cba2-43a5-a8e5-2d11fedd1b4c",
             "name": "Edit course",
-            "url": "http://127.0.0.1:5000/courses/4",
+            "url": "http://127.0.0.1:5000/api/v1/devcamp/course/",
             "method": "PUT",
             "sortNum": 90000,
             "created": "2023-11-03T19:12:55.122Z",
-            "modified": "2023-11-03T19:12:55.122Z",
+            "modified": "2023-11-10T22:02:13.444Z",
             "headers": [],
             "params": [],
             "tests": []
@@ -185,11 +223,11 @@
             "colId": "ea5cc3e9-edb2-456c-9c7d-0a9a157c9c23",
             "containerId": "c33f8298-cba2-43a5-a8e5-2d11fedd1b4c",
             "name": "Delete course",
-            "url": "http://127.0.0.1:5000/courses/3",
+            "url": "http://127.0.0.1:5000/api/v1/devcamp/course/",
             "method": "DELETE",
             "sortNum": 100000,
             "created": "2023-11-03T19:12:55.123Z",
-            "modified": "2023-11-03T19:12:55.123Z",
+            "modified": "2023-11-10T22:02:19.400Z",
             "headers": [],
             "params": [],
             "tests": []
