@@ -1,1 +1,3 @@
 /node_modules/*
+#npm install mongoose   <- También iniciar Mongo DB
+#npm install jsonwebtoken bcrypst
