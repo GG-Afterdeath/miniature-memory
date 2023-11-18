@@ -42,4 +42,9 @@ userSchema.pre('save', async function(){
     this.password = await bcryptjs.hash(this.password, sal)
 })
 
+// Metodo para comparar password de usuario y el password del body
+userSchema.methods.compararPassword = async function(password){
+    return bcryptjs.compare(password, this.password)
+}
+
 module.exports = mongoose.model('User', userSchema)
