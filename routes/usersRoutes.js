@@ -9,12 +9,13 @@ const router = express.Router()
 router.post('/register', async(req, resp) => {
     // Registrar usuario
     try {
-        const user = 
-        await UserModel.create(req.body)
-
+        const user = await UserModel.create(req.body)
+        // Crear token
+        const token = user.generarJWT()
         resp.status(201).json({
             succes: true,
-            data: user
+            data: user,
+            token_jwt: token
     })
     } catch (error) {
         resp.status(400).json({
@@ -22,7 +23,6 @@ router.post('/register', async(req, resp) => {
             message: error.message
         })
     }
-
     
 })
 
@@ -49,12 +49,24 @@ router.post('/login', async (req, resp) => {
             //   ESTÁ EQUIVOCADO
             const isMatch = await user.compararPassword(password)
             if(isMatch){
-                return resp.status(200).json({
+                const token = user.generarJWT()
+                // Opciones para crear la cookie
+                const options = {
+                    expires: new Date(
+                                Date.now() + 
+                                process.env.COOKIE_EXPIRE * 24 * 60 * 60 * 1000),
+                    httpOnly: true
+                }
+                return resp.
+                status(200).
+                cookie('token', token, options).
+                json({
                     succes: true,
                     msg: 'Bienvenido al sistema',
-                    data: user
+                    data: user,
+                    jwt_token: token
                 })
-            }else{
+            }else{                                                               
                 resp.status(400).json({
                     succes: false,
                     message: 'Credenciales incorrectas'

@@ -2,6 +2,7 @@ const express = require('express')
 const dotenv = require('dotenv')
 const colors = require('colors')
 const conectarDB = require('./config/db')
+const cookieParser = require('cookie-parser')
 
 // Dependencias de rutas
 const bootcampRoutes = require('./routes/bootcampRoutes')
@@ -20,6 +21,7 @@ conectarDB()
 // Construir el objeto de la aplicación
 const app = express()
 app.use(express.json())
+app.use(cookieParser())
 
 // Conectar las rutas al objeto app
 app.use('/api/v1/devcamp/bootcamp',
